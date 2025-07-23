@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Before & After Swipe</title>
+
+  <!-- CSS של TwentyTwenty -->
+  <link rel="stylesheet" href="twentytwenty/twentytwenty.css">
+
+  <style>
+    body {
+      max-width: 600px;
+      margin: 50px auto;
+    }
+      img {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    will-change: clip;
+    transform: translateZ(0);
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="twentytwenty-container">
+    <img src="after.jpg" alt="After"/>
+    <img src="before.jpg" alt="Before"/>
+  </div>
+
+  <!-- jQuery מה-CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery Event Move -->
+<script src="twentytwenty/jquery.event.move.min.js"></script>
+
+  <!-- JS של TwentyTwenty -->
+  <script src="twentytwenty/jquery.twentytwenty.js"></script>
+
+  <script>
+    $(function(){
+      $(".twentytwenty-container").twentytwenty({
+        move_with_handle_only: false,
+        click_to_move: true
+      });
+    });
+  </script>
+
+</body>
+</html>
